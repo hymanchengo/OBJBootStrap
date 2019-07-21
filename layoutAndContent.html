@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>  <!-- 对手机不同分辨率的支持 -->
+		<title>OBJ-BootStrap模板</title>
+		<link href="1.css"/>
+		<link href="1.js"/>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		
+		
+		<!--这2个JS在页面顶部加载是为了避免渲染过程中出现闪动 -->
+		<!--[if lt IE 9]>
+			<script src="js/html5shiv.min.js"></script>
+			<script src="js/respond.min.js"></script>
+		<![endif]-->
+		
+		<style>
+			.col1{
+				background-color:red;
+			}
+			.col2{
+				background-color:green;
+			}
+			.col3{
+				background-color:blue;
+			}
+			.col4{
+				background-color:yellow;
+			}
+			.col5{
+				background-color:pink;
+			}
+			.col6{
+				background-color:purple;
+			}
+			.col7{
+				background-color:grey;
+			}
+			.nestcol{
+				background-color:orange;
+			}
+			img{
+			width:20%;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<nav></nav>
+		</header>
+		<main>
+			<div class="container" style="border:1px red solid">
+				<h3>下面每一行都使用了不同的列属性，在不同宽度视口中将显示不一样的排列（水平或堆叠，可以改变浏览器视口宽度观察）</h3>
+				<div class="row">
+					<div class="col1 col-xl-4">
+						一行一列
+					</div>
+					<div class="col2 col-xl-4">
+						一行二列
+					</div>
+					<div class="col3 col-xl-4">
+						一行三列
+					</div>
+					
+				</div>
+				<p></p>
+				<div class="row">
+					<div class="col1 col-lg-4">
+						一行一列
+					</div>
+					<div class="col2 col-lg-4">
+						一行二列
+					</div>
+					<div class="col3 col-lg-4">
+						一行三列
+					</div>
+					
+				</div>
+				<p></p>
+				<div class="row">
+					<div class="col1 col-md-4">
+						一行一列
+					</div>
+					<div class="col2 col-md-4">
+						一行二列
+					</div>
+					<div class="col3 col-md-4">
+						一行三列
+					</div>
+				</div>
+				<p></p>
+				<div class="row">
+					<div class="col1 col-sm-4">
+						一行一列
+					</div>
+					<div class="col2 col-sm-4">
+						一行二列
+					</div>
+					<div class="col3 col-sm-4">
+						一行三列
+					</div>
+				</div>
+				
+				
+				<h3>下面每一行演示的是使用占据不同比例的列效果（col-sm-）</h3>
+				<div class="row">
+					<div class="col1 col-sm-4 ">
+						4
+					</div>
+					<div class="col2 col-sm-4 ">
+						4
+					</div>
+					<div class="col3 col-sm-4 ">
+						4
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col1 col-sm-3 ">
+						3
+					</div>
+					<div class="col2 col-sm-3">
+						3
+					</div>
+					<div class="col3 col-sm-3">
+						3
+					</div>
+					<div class="col4 col-sm-3">
+						3
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col1 col-sm-2">
+						2
+					</div>
+					<div class="col2 col-sm-2">
+						2
+					</div>
+					<div class="col3 col-sm-2">
+						2
+					</div>
+					<div class="col4 col-sm-2">
+						2
+					</div>
+					<div class="col5 col-sm-2">
+						2
+					</div>
+					<div class="col6 col-sm-2">
+						2
+					</div>
+				</div>
+				
+				
+				<h3>下面每一行演示是同时使用sm,md,lg中的2个以上的列的布局行为</h3>
+				<div class="row">
+					<div class="col1 col-sm-4 col-lg-4 ">
+						4 sm vs lg
+					</div>
+					<div class="col2 col-sm-4 col-lg-4">
+						4 sm vs lg
+					</div>
+					<div class="col3 col-sm-4 col-lg-4">
+						4 sm vs lg
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col1 col-lg-4 col-md-4 ">
+						4 md vs lg
+					</div>
+					<div class="col2 col-lg-4 col-md-4 ">
+						4 md vs lg
+					</div>
+					<div class="col3 col-lg-4 col-md-4 ">
+						4 md vs lg
+					</div>
+				</div>
+				
+				<h3>下面演示列偏移（offset-sm-*）一旦进入堆叠，offset应该就是失效的</h3>
+				<div class="row">
+					<div class="col1 col-sm-3 ">
+						3
+					</div>
+					<div class="col2 offset-sm-1 col-sm-3">
+						offset-sm-1 3
+					</div>
+					<div class="col3 offset-sm-2 col-sm-3 ">
+						offset-sm-2 3
+					</div>
+				</div>
+				
+				
+				<h4>下面演示列重新排序 1,2,3,4表示原来的顺序 使用了order-*属性后将重新制定列的顺序，我们这边将4这一列扣上order-1属性，就排到了第一列</h4>
+				<div class="row">
+					<div class="col1 col-sm-3 order-4">
+						1
+					</div>
+					<div class="col2 col-sm-3 order-3">
+						2
+					</div>
+					<div class="col3 col-sm-3 order-2">
+						3
+					</div>
+					<div class="col4 col-sm-3 order-1">
+						4
+					</div>
+				</div>
+				
+				<h4>下面演示嵌套,嵌套可以进一步对列进行细粒度的控制</h4>
+				<div class="row">
+					<div class="col1 col-sm-3">
+						3
+					</div>
+					<div class="col2 col-sm-3">
+						<div class="row">
+							<div class="nestcol col-sm-6">3-6</div>
+								
+							<div class="nestcol offset-sm-1 col-sm-5">3-5</div>
+						</div>
+					</div>
+					<div class="col3 col-sm-3">
+						3
+					</div>
+					<div class="col4 col-sm-3">
+						3
+					</div>
+				</div>
+				
+				<h3>BootStrap排版</h3>
+				<h1>这是h1标签<small  class="text-muted">这是small标签修饰的一个小标题</small></h1>
+				<div class="h1">这是div标签使用h1类修饰</div>
+				<h1 class="display-1">这个更夸张的一级标题,默认不是响应式的</h1>
+				<p class="lead">这是一个class为lead的段落</p>
+				<h4>内联文本元素</h4>
+				<p>用mark标签高亮文本<mark>你好</mark><del>用del标签表示删除文本</del><s>用s标签表示文本不准确了</s>。<ins>使用了ins标签修饰对文档补充的内容</ins>。<u>使用了u标签来给文本添下划线</u></p>
+				<p><small>small修饰精美打印的文本</small><strong>strong粗体渲染</strong>和<b>b标签</b>。<em>em渲染成斜体</em>。<i>i标签</i></p>
+				<p><abbr title="Hyman And Ting">HymanTing</abbr>这种提示方式弱爆了</p>
+				<h4>文本</h4>
+				<h5>对齐样式</h5>
+				<p class="text-left">text-left猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐</p>
+				<p class="text-right">text-right猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐</p>
+				<p class="text-center">text-center猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐</p>
+				<p class="text-justify">text-justify猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐猜猜这个是什么对齐</p>
+				<h5>大小写转换样式</h5>
+				<span class="text-lowercase">text-lowercase将大写的PWQ转化为小写。</span>
+				<span class="text-uppercase">text-uppercase将小写的pwq转化为大写。</span>
+				<span class="text-capitalize">text-capitalize将helloworld的首字母转换为大写。</span>
+				<h5>引用样式</h5>
+				<blockquote class="blockquote text-right">
+					<p class="mb-0">纸上得来终觉浅，绝知此事要躬行</p>
+					<footer  class="blockquote-footer">陆游<cite>《冬夜读书示子聿》</cite></footer>
+				</blockquote>
+				<h4>列表</h4>
+				<h5>list-unstyled去项目符号，只针对一级有效</h5>
+				<ul class="list-unstyled">
+					<li>数字
+						<ul>
+							<li>2</li>
+							<li>1</li>
+						</ul>
+					</li>
+					<li>字母</li>
+				</ul>
+				<h5>list-inline,list-inline-item综合使用去除项目符号增加了些margin</h5>
+				<ul class="list-inline">
+					<li class="list-inline-item">数字
+					</li>
+					<li  class="list-inline-item">字母</li>
+				</ul>
+				<h5>定义列表</h5>
+				<dl class="row">
+				<dt class="col-sm-2">bootstrap基础教程</dt>
+				<dd class="col-sm-10">这本书基本翻译了官网上的一些内容，可以直接看官网</dd>
+				<dt class="col-sm-2 text-truncate">Bootstrap实战asdasdsadadadasdasdasdasdasdasdasd</dt>
+				<dd class="col-sm-10">
+					<p>这本书的作者是David Cochran</p>
+					<p>这本书还是不错的</p>
+				</dd>
+				<dt class="col-sm-2">字符</dt>
+				<dd class="col-sm-10">
+					<dl class="row">
+						<dt class="col-sm-2">字母</dt>
+						<dd class="col-sm-10">abcdefg</dd>
+					</dl>
+					<dl class="row">
+						<dt class="col-sm-2">数字</dt>
+						<dd class="col-sm-10">1 2 3 4</dd>
+					</dl>
+				</dd>
+				
+				</dl>
+				<h4>字体</h4>
+				<h5>响应式字体</h5>
+				<p><abbr title="Responsive font sizes">RFS</abbr> can be enabled by changing the $enable-responsive-font-sizes Sass variable to true and recompiling Bootstrap.</p>
+				
+				<h4>代码</h4>
+				<p>用code展示单行代码，注意转义html的尖角符<code>
+					&lt;html&gt;
+				</code>
+				
+				</p>
+				<p>
+					用&lt;pre&gt;标签修饰多行代码(代码块，同样注意尖角符的转义)，如果代码太多，可用.pre-scrollable来限定最高340px,
+					超出部分显示滚动条
+					<pre class="pre-scrollable">
+						&lt;html&gt;
+							&lt;head&gt;
+							&lt;/head&gt;
+							&lt;body&gt;
+								&lt;p&gt;123&lt;/p&gt;
+								&lt;p&gt;123&lt;/p&gt;
+								&lt;p&gt;123&lt;/p&gt;
+								&lt;p&gt;123&lt;/p&gt;
+								&lt;p&gt;123&lt;/p&gt;
+								&lt;p&gt;123&lt;/p&gt;
+								&lt;p&gt;123&lt;/p&gt;
+								&lt;p&gt;123&lt;/p&gt;
+								&lt;p&gt;123&lt;/p&gt;
+								&lt;p&gt;123&lt;/p&gt;
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								&lt;p&gt;123&lt;/p&gt;
+								
+							&lt;/body&gt;
+						&lt;/html&gt;
+					</pre>
+				</p>
+				<p>用var修饰变量 <var>x</var>=<var>b</var><var>y</var></p>
+				<p>用&lt;kbd&gt; 来修饰常规的键盘输入 <kbd>Ctrl+C</kbd></p>
+				<p>用&lt;samp&gt; 来修饰程序的输出--> <samp>程序输出hello world!</samp></p>
+				
+				<h4>图像-将图像纳入响应行为，使他们不能比父元素大</h4>
+				<p>如下为响应式图片,img-fluid修饰，大小随着父元素的尺寸而缩放</p>
+				<div>
+				<img src="logo.png" class="img-fluid" alt="Responsive image">
+				</div>
+				<p>使用.img-thumbnail添加1px的圆角border</p>
+				<div >
+				<img src="logo.png" class="img-fluid img-thumbnail" alt="Responsive image">
+				</div>
+				<p>对齐图像</p>
+				<div>
+				<img src="logo.png" class="img-fluid img-thumbnail  mx-auto d-block" alt="Responsive image">
+				</div>
+				<div>
+				<img src="logo.png" class="img-fluid img-thumbnail float-right " alt="Responsive image">
+				</div>
+				<!-- <h4 style="clear:both">使用表格</h4> -->
+				<h1 style="clear:both">如果页面个别元素或众多元素样式有些不合常理，那么有可能是某个标签没有正确关闭</h1>
+				<div class="table-responsive">
+				<table class="table table-dark table-striped table-bordered table-hover ">
+					<!-- <caption>entertain type</caption> -->
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>音乐</th>
+							<th>电影</th>
+							<th>电视剧</th>
+							<th>电视剧</th>
+							<th>电视剧</th>
+							<th>电视剧</th>
+							<th>电视剧</th>
+						</tr>
+					</thead>
+					
+					<tbody>
+						<tr   class="bg-primary">
+							<th scope="row">1</th>
+							<td>月亮代表我的心</td>
+							<td>钢铁侠</td>
+							<td>怪奇物语</td>
+							<td>怪奇物语</td>
+							<td>怪奇物语</td>
+							<td>怪奇物语</td>
+							<td>怪奇物语</td>
+						</tr>
+						<tr>
+							<th scope="row">2</th>
+							<td>月亮代表我的心</td>
+							<td>钢铁侠</td>
+							<td>怪奇物语</td>
+							<td>怪奇物语</td>
+							<td>怪奇物语</td>
+							<td>怪奇物语</td>
+							<td>怪奇物语</td>
+						</tr>
+						
+						<tr>
+							<th scope="row">3</th>
+							<td>月亮代表我的心</td>
+							<td>钢铁侠</td>
+							<td>怪奇物语</td>
+							<td>怪奇物语</td>
+							<td>怪奇物语</td>
+							<td>怪奇物语</td>
+							<td>怪奇物语</td>
+						</tr>
+						<tr>
+							<th scope="row">4</th>
+							<td>月亮代表我的心</td>
+							<td>钢铁侠</td>
+							<td>怪奇物语</td>
+							<td>怪奇物语</td>
+							<td>怪奇物语</td>
+							<td>怪奇物语</td>
+							<td>怪奇物语</td>
+						</tr>
+					</tbody>
+				</table>
+				 </div>
+				
+				<p>需要指定figure下img的宽度，figure才会不占据容器整行宽度</p>
+				<figure class="figure">
+					<img src="logo.png" class="figure-img img-fluid rounded "  style="width:200px;" alt="logo">
+					<figcaption class="figure-caption text-right">This is logo</figcaption>
+				</figure>
+			</div>
+			
+			
+			
+		</main>
+		<footer></footer>
+		
+		
+		<!--JS在页面底部加载时为了避免js的阻断加载导致页面渲染缓慢-->
+		<script src="js/jquery.min.js" type="text/javascript"></script>
+		
+		<script src="js/bootstrap.min.js" type="text/javascript"></script>
+		
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<script>
+			
+		</script>
+	</body>
+</html>

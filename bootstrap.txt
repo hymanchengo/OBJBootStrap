@@ -1,0 +1,83 @@
+【布局】
+========容器元素
+container 支持响应式设计
+container-fluid 看起来不支持响应布局，其max-width正是父容器的宽度
+
+========栅格系统
+
+
+========弹性媒体对象
+
+
+
+========响应式工具类
+
+
+container与container-fluid区别
+container支持响应式，在既定视口大小的情况下,container有个max-width，container的100%宽就表示max-width 
+在css样式中使用了box-sizing:border-box，所以max-width是指包含border及padding及content的这部分。
+
+那么剩余的就是margin这部分。margin设置为auto
+
+行 class = "row"
+列 class = "col-xl" "col-lg" "col-md" "col-sm"
+col-修饰的列当视口满足指定的宽度时将水平排列，否则将堆叠
+因此，这些属性对于大屏而言没有任何区别，对于超小屏而言也没有区别， 可以总结出超过区间的这些屏幕，超大则水平排列，超小则堆叠排列
+但是出于中间大小的屏幕，将根据使用的col-xl col-lg等属性来决定是否满足水平排列的需求
+
+因此小于指定宽度的屏幕将堆叠显示，而大于指定宽度将水平显示。
+
+因此在使用col-xl col-lg等属性时得有个概念，你希望在电脑上显示几栏，在pad上显示几栏，在手机上显示几栏，然后选用相应的属性
+
+从属性本身的意义也可以看出，它修饰的是多大宽度的列，因此要结合内容看是否显示得下
+
+如果多个一起用，那么最小的那个起作用
+
+
+
+
+媒体查询 当浏览器视窗宽度>=1200px时,容器最大宽度为1140px
+@media (min-width: 1200px)
+.container {
+    max-width: 1140px;
+}
+@media (min-width: 992px)当浏览器视窗宽度>=992px时,容器最大宽度为960px,下面以此类推 对应的是col-lg- 意思是col-lg修饰的列在视窗>=992px时，会行布局，小于992px的都将占据一行
+.container {
+    max-width: 960px;
+}
+@media (min-width: 768px)  对应的是col-md-    在视口>=768px时，col-md-修饰的列 水平排列将生效   否则将堆叠显式
+.container {
+    max-width: 720px;
+}
+@media (min-width: 576px)  需要注意下限，当视窗宽度小于576px时，那么container将和视窗宽度相等   对应的是col-sm-  在视口>=576px时，col-sm-修饰的列将进行
+.container {
+    max-width: 540px;
+}
+
+实战CSS
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+
+盒模型
+______________________________________
+margin|border|padding|contenet|   
